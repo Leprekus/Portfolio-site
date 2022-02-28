@@ -19,7 +19,9 @@ body {
   padding: 25px 21px 21px 21px;
 }
 
-a {
+/* fonts */
+
+a, h1 {
   font-family: 'Bahnschrift';
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -27,11 +29,55 @@ a {
   text-decoration: none;
 }
 
-nav {
+p {
+  font-family: 'Bahnschrift';
+  text-transform: uppercase;
+}
+
+/* nav styling */
+
+.nav-mobile {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* dropdown menu  */
+
+#dropdown-menu {
+/* when toggling visibility display value has to change
+between flex and none */
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 20rem;
+  align-items: center;
+
+  
+
+}
+
+.dropdown-menu-item.dropdown-menu-item{
+  margin-top: 2.5rem;
+}
+
+
+/* contact section styling */
+
+#contact {
+  background-color: blue;
+  width: 100%;
+  margin-top: 45px;
+  
+
+}
+
+.contact-item{
+  margin: 0 auto; 
+  display: block; 
+  min-width: 1%;
+  background-color: red;
 }
 
 .logo {
@@ -46,13 +92,15 @@ img {
 }
 
 
+
+
 /* colors */
-.hamburger-menu, hr {
+#burger-nav-button, hr {
   color: #7879f1;
   fill: #7879f1;
 }
 
 a:hover {
-  color: blue;
-  -webkit-text-stroke-color: blue;
+  color: #7879f1;
+  -webkit-text-stroke-color: #7879f1;
 }
