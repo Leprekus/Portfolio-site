@@ -20,6 +20,15 @@ body {
   height: 100%;
 }
 
+main {
+  scroll-snap-type: mandatory;
+}
+
+main > section {
+  scroll-snap-align: start;
+}
+
+
 /* fonts */
 
 a, h1 {
@@ -42,6 +51,11 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
+  padding: 25px 21px 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* dropdown menu  */
@@ -67,22 +81,39 @@ p {
 /* contact section styling */
 
 #contact {
-  background-color: blue;
   width: 100%;
+  height: 100%;
   margin-top: 45px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+  
+}
+
+.p {
+  text-align: justify;
+  margin: 0 auto;
+  width: 30;
 }
 
 .contact-item{
-  margin: 0 auto;
-  text-align: center;
-  min-width: 1%;
-  background-color: red;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 1.2;
+}
+
+.space {
+  margin: 17px 0;
 }
 
 .logo {
   width: 182px;
   height: 182px;
+  margin: 0 auto 32px;
+
 
 }
 
@@ -91,11 +122,44 @@ img {
   height: auto;
 }
 
+/* projects styling */
+
+#projects {
+  height: 100vh;
+}
+
+.projects-container {
+  height: 250px;
+  width: 250px;
+  margin: 51px 0 39px;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project {
+  height: inherit;
+  width: inherit;
+
+}
+
+.one {
+  background-color: blue;
+}
+
+.two {
+  background-color: tomato;
+}
+
+.three {
+  background-color: orange;
+}
+
 /* footer: github & bubble page indicators */
 .github-logo {
   width: 80px;
 
-  position: absolute;
+  position: fixed;
   bottom: 21px;
   left: 21px;
 }
@@ -107,7 +171,7 @@ img {
   display: flex;
   justify-content: space-between;
 
-  position: absolute;
+  position: fixed;
   bottom: 31px;
   left: 50%;
   transform: translate(-50%, -50%);
