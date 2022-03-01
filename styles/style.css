@@ -24,9 +24,6 @@ main {
   scroll-snap-type: mandatory;
 }
 
-main > section {
-  scroll-snap-align: start;
-}
 
 
 /* fonts */
@@ -37,6 +34,11 @@ a, h1 {
   -webkit-text-stroke-color: black;
 
   text-decoration: none;
+}
+
+h1{
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 p {
@@ -103,6 +105,8 @@ section {
 
   align-items: center;
   justify-items: center;
+
+  text-transform: justify;
 
   
 }
