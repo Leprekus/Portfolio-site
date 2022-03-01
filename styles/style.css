@@ -17,6 +17,7 @@ html {
 
 body {
   padding: 25px 21px 21px 21px;
+  height: 100%;
 }
 
 /* fonts */
@@ -46,8 +47,8 @@ p {
 /* dropdown menu  */
 
 #dropdown-menu {
-/* when toggling visibility display value has to change
-between flex and none */
+    /* when toggling visibility display value has to change
+    between flex and none */
   display: none;
   flex-direction: column;
   width: 100%;
@@ -69,13 +70,12 @@ between flex and none */
   background-color: blue;
   width: 100%;
   margin-top: 45px;
-  
 
 }
 
 .contact-item{
-  margin: 0 auto; 
-  display: block; 
+  margin: 0 auto;
+  text-align: center;
   min-width: 1%;
   background-color: red;
 }
@@ -91,8 +91,35 @@ img {
   height: auto;
 }
 
+/* footer: github & bubble page indicators */
+.github-logo {
+  width: 80px;
 
+  position: absolute;
+  bottom: 21px;
+  left: 21px;
+}
 
+.nav-bubbles-container {
+  width: 70px;
+  height: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  bottom: 31px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-bubbles {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  
+}
 
 /* colors */
 #burger-nav-button, hr {
