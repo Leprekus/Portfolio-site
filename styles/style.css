@@ -64,9 +64,9 @@ main, section {
   transition: 0.25s ease-out;
 }
 
-/* dropdown menu  */
+/*  menu  dropdown for mobile, navbar for desktop */
 
-#dropdown-menu {
+.menu {
     /* when toggling visibility display value has to change
     between flex and none */
   display: none;
@@ -74,12 +74,13 @@ main, section {
   width: 100%;
   height: 20rem;
   align-items: center;
-
-  
-
 }
 
-.dropdown-menu-item.dropdown-menu-item{
+.purple-container {
+  display: none;
+}
+
+.dropdown-menu-item{
   margin-top: 2.5rem;
 }
 
@@ -206,11 +207,33 @@ a:hover {
 }
 
 @media screen and (min-width: 800px) {
-  .desktop-nav {
+  .menu {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .purple-container {
+    display: inline-block;
+    background-color: #7879f1;
+    width: 100px;
+    height: 140px;
+  }
+
+  .purple-github-logo {
+    display: block;
+    width: 78px;
+    height: 78px;
+
+    margin: 15px auto 47px;
   }
 
   .nav-mobile {
+    display: none;
+  }
+
+  main {
     display: none;
   }
 }
