@@ -224,6 +224,17 @@ a:hover {
 }
 
 @media screen and (min-width: 800px) {
+
+  main {
+    top: 140px;
+    height: 85vh;
+
+    display: grid;
+    grid-template-rows: 10% 40% 10% 40%;
+    grid-template-columns: repeat(4, 25%);
+    position: relative;
+  }
+
   .nav-desktop {
     width: 90%;
     display: flex;
@@ -238,10 +249,6 @@ a:hover {
     letter-spacing: 0.1rem;
     font-size: 1.15rem;
 
-  }
-
-  .nav-mobile {
-    display: none;
   }
 
   .purple-container {
@@ -260,9 +267,9 @@ a:hover {
     margin: 15px auto 47px;
   }
 
-  #contact, #projects, #blog {
-
+  .nav-mobile, .footer-nav, #contact, #projects, #blog {
     display: none;
+
   }
 
 
