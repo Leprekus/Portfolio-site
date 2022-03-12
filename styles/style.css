@@ -33,7 +33,7 @@ main {
 
 a {
   color: black;
-  transition: 0.25s ease-out;
+  transition: 0.15s ease-out;
   text-decoration: none;
 }
 
@@ -159,13 +159,9 @@ img {
 
 /* projects styling */
 
-#projects {
-  height: 100vh;
-}
-
 .projects-container {
-  height: 250px;
-  width: 250px;
+  height: 18vw;
+  width: 18vw;
   margin: 51px 0 39px;
 
   border-radius: 15px;
@@ -199,7 +195,7 @@ img {
   left: 21px;
 }
 
-.nav-bubbles-container {
+.nav-bubbles-container-mobile, .nav-bubbles-container-desktop {
   width: 70px;
   height: 10px;
 
@@ -227,9 +223,18 @@ img {
 }
 
 a:hover {
-  color: #7879f1;
+  color: #fa770c;
   -webkit-text-stroke-color: #7879f1;
 }
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 800px) {
 
@@ -237,31 +242,53 @@ a:hover {
     -webkit-text-stroke-width: 0px;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   main {
-    min-width: 100%;
+    width: 100%;
     height: 85vh; 
   
     margin-top: 140px;
 
     display: flex;
+    gap: 10vw;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-
-
   }
 
   section {
     height: 100%;
-    min-width: 100%;
+    min-width:100%;
   
     display: grid;
     grid-template-rows: 25% 10% 25% 25% 15%;
-    grid-template-columns: 110px minmax(min-content, max-content)  50% minmax(min-content, 300px) 110px;
+    grid-template-columns: minmax(auto, 110px) minmax(min-content, 25%) minmax(min-content, auto) minmax(min-content, 300px) minmax(auto, 110px);
     position: relative;
 
     scroll-snap-align: start;
   }
+
+  #blog {
+    min-width: 89%;
+  }
+
+  .background-container {
+
+    margin-top: 204px;
+    padding-right:12px;
+    padding-left: 30px;
+    height: 85vh;
+
+    position: absolute;
+    z-index: -1;
+
+    top: 30px;
+    right: 10px;
+  }
+
 
   .nav-desktop {
     width: 90%;
@@ -296,13 +323,27 @@ a:hover {
     justify-self: stretch;
   }
 
-  .nav-bubbles-container {
-    position: absolute;
-    left:13.5%;
-    bottom: 58%;
-
+  .nav-bubbles-container-mobile {
+    display: none;
   }
 
+  .nav-bubbles-container-desktop {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    position: relative;
+    bottom: -35px;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  #double-arrow {
+    width: 80px;
+    position: relative;
+    top: 53%;
+    right: 5vw;
+  }
+  
   .grid-area-one {
     grid-row: 2 / 3;
     grid-column: 4 / 5;
@@ -340,6 +381,7 @@ a:hover {
   }
 
 
+
   .purple-container-image {
     display: block;
     width: 78px;
@@ -358,9 +400,12 @@ a:hover {
     bottom: 0;
     right: 0;
   }
-
-
-
 }
 
+@media screen and (max-width: 1382px) and (min-width: 800px) {
+  .logo, .blob {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+  }
+}
 
