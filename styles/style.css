@@ -339,11 +339,12 @@ a:hover {
 
   #double-arrow {
     width: 80px;
-    position: relative;
-    top: 53%;
-    right: 5vw;
+    position: absolute;
+    bottom: 400px;
+    right: 400px;
+
+    transition: 0.2s linear 0.1s;
   }
-  
   .grid-area-one {
     grid-row: 2 / 3;
     grid-column: 4 / 5;
