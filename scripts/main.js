@@ -2,15 +2,19 @@
 let doubleArrow = document.getElementById('double-arrow')
 let test = document.querySelectorAll('main .content-wrapper')
 
-function getOffsetTop() {
-    test.forEach(element => {
-        const leftOffset =  element.offsetLeft;
-        const rightOffset = element.offsetRight
-        const elementWidth = element.offsetWidth
-        if (leftOffset + rightOffset < elementWidth) {
-            console.log('small')
-        }
-    })
+let sections = document.querySelectorAll('.content-wrapper')
+
+let counter = 0;
+
+function changeSection() {
+    counter += 1
+    if(counter >= sections.length) {
+        counter = 0
+    }
+    doubleArrow.href = `#${sections[counter].id}`
+  
+    // doubleArrow.href = `#${}`
 }
 
-window.addEventListener('scroll', getOffsetTop)
+doubleArrow.onclick = changeSection
+
