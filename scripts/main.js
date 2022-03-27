@@ -1,4 +1,4 @@
-//vars
+//vars desktop 
 let doubleArrow = document.getElementById('double-arrow')
 let test = document.querySelectorAll('main .content-wrapper')
 
@@ -29,3 +29,21 @@ function changeSection() {
 }
 
 doubleArrow.onclick = changeSection
+
+
+// vars mobile
+
+let burgerNavButton = document.getElementById('burger-nav-button')
+let dropDownMenu = document.getElementById('dropdown-menu')
+
+function slideDropDownMenuIntoView () {
+    
+        if (dropDownMenu.style.top === '-200px') {
+            dropDownMenu.style.top = '150px'
+    } else {
+        dropDownMenu.style.top = '-200px'
+    }
+   
+}
+
+burgerNavButton.onmouseover = slideDropDownMenuIntoView
